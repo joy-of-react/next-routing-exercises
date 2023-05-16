@@ -1,0 +1,6 @@
+.screen-saver-wrapper {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+  background: black;
+}
