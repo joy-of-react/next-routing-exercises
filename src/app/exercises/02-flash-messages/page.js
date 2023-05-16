@@ -1,13 +1,17 @@
 import React from 'react';
-
-import ScreenSaver from '../../../components/ScreenSaver';
-
-import './styles.css';
+import Link from 'next/link';
 
 function FlashMsgExercise() {
   return (
-    <main className="exercise-one">
-      <ScreenSaver color="red" />
+    <main>
+      <h1>Welcome to my website!</h1>
+      <p>
+        Got feedback? Please{' '}
+        <Link href="/exercises/02-flash-messages/contact">
+          contact us
+        </Link>
+        .
+      </p>
     </main>
   );
 }

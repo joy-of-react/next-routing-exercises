@@ -1,6 +1,8 @@
 import React from 'react';
 
-function RootLayout({ children }) {
+import './styles.css';
+
+function FlashMsgLayout({ children }) {
   return (
     <html lang="en">
       <body>{children}</body>
@@ -8,4 +10,4 @@ function RootLayout({ children }) {
   );
 }
 
-export default RootLayout;
+export default FlashMsgLayout;
