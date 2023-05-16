@@ -47,9 +47,15 @@ h6 {
 }
 
 /* Exercise styles */
+body {
+  background: black;
+  color-scheme: dark;
+  color: white;
+  font-family: sans-serif;
+  padding: 32px;
+}
 .screen-saver-wrapper {
   overflow: hidden;
   position: fixed;
   inset: 0;
-  background: black;
 }
