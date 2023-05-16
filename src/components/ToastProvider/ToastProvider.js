@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
 import useKeydown from '../../hooks/use-keydown';
@@ -5,18 +6,7 @@ import useKeydown from '../../hooks/use-keydown';
 export const ToastContext = React.createContext();
 
 function ToastProvider({ children }) {
-  const [toasts, setToasts] = React.useState([
-    {
-      id: crypto.randomUUID(),
-      message: 'It works!',
-      variant: 'success',
-    },
-    {
-      id: crypto.randomUUID(),
-      message: 'Logged in',
-      variant: 'success',
-    },
-  ]);
+  const [toasts, setToasts] = React.useState([]);
 
   const handleEscape = React.useCallback(() => {
     setToasts([]);
@@ -46,7 +36,11 @@ function ToastProvider({ children }) {
 
   return (
     <ToastContext.Provider
-      value={{ toasts, createToast, dismissToast }}
+      value={{
+        toasts,
+        createToast,
+        dismissToast,
+      }}
     >
       {children}
     </ToastContext.Provider>

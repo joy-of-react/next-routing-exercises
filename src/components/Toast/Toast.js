@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   AlertOctagon,
@@ -20,16 +21,21 @@ const ICONS_BY_VARIANT = {
 };
 
 function Toast({ id, variant, children }) {
-  const { dismissToast } = React.useContext(ToastContext);
-  const Icon = ICONS_BY_VARIANT[variant];
+  const { dismissToast } =
+    React.useContext(ToastContext);
+  const Icon = ICONS_BY_VARIANT[variant] || Info;
 
   return (
-    <div className={`${styles.toast} ${styles[variant]}`}>
+    <div
+      className={`${styles.toast} ${styles[variant]}`}
+    >
       <div className={styles.iconContainer}>
         <Icon size={24} />
       </div>
       <p className={styles.content}>
-        <VisuallyHidden>{variant} -</VisuallyHidden>
+        <VisuallyHidden>
+          {variant} -
+        </VisuallyHidden>
         {children}
       </p>
       <button

@@ -47,9 +47,14 @@ h6 {
 }
 
 /* Exercise styles */
-.screen-saver-wrapper {
-  overflow: hidden;
-  position: fixed;
-  inset: 0;
-  background: black;
+html {
+  font-size: 125%;
+}
+body {
+  font-family: sans-serif;
+  padding: 32px;
+}
+
+p {
+  margin-bottom: 1em;
 }
